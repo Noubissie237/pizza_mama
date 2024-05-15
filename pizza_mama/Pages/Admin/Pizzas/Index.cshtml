@@ -2,13 +2,13 @@
 @model pizza_mama.Pages.Admin.Pizzas.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Administration des Pizzas";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Nouveau</a>
 </p>
 <table class="table">
     <thead>
@@ -44,9 +44,8 @@
                 @Html.DisplayFor(modelItem => item.ingredients)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.PizzaID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.PizzaID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PizzaID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.PizzaID">Edition</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PizzaID">Supprimer</a>
             </td>
         </tr>
 }
