@@ -5,6 +5,13 @@
 
 <h1>Vous devez vous authentifier</h1>
 <br/>
+@if (Model.displayInvalidAccountMessage)
+{
+    <div class="alert alert-danger" role="alert">
+        Login ou mot de passe invalide !
+    </div>
+}
+
 
 <form method="post">
     <input type="text" name="username" placeholder="Login" required> <br/><br/>
